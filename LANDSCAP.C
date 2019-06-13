@@ -1,4 +1,4 @@
-/*A landscape having cartoon castle; Dated: March 30,2019
+/* Dated: March 30,2019
 HAPPY CODING! */
 #include<stdio.h>
 #include<conio.h>
