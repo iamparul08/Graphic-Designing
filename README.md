@@ -1,2 +1,5 @@
 # Graphic-Design
-A Landscape, Indian Flag, Analog Clock, Kite
+Landscape,
+Indian Flag, 
+Analog Clock, 
+Kite
