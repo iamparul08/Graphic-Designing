@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main(){
+int gd=DETECT,gm,i,j=96,m;
+float k=90.5;
+initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+rectangle(210,130,430,350);
+circle(320,240,105);
+settextstyle(TRIPLEX_FONT,HORIZ_DIR,3);
+setcolor(14);
+outtextxy(245,85,"ANALOG CLOCK");
+setfillstyle(SOLID_FILL,4);
+floodfill(211,131,15);
+setfillstyle(SOLID_FILL,7);
+floodfill(320,240,15);
+settextstyle(GOTHIC_FONT,HORIZ_DIR,1);
+outtextxy(315,130,"12");
+outtextxy(370,145,"1");
+outtextxy(402,182,"2");
+outtextxy(415,228,"3");
+outtextxy(398,280,"4");
+outtextxy(360,313,"5");
+outtextxy(312,325,"6");
+outtextxy(264,311,"7");
+outtextxy(231,276,"8");
+outtextxy(217,229,"9");
+outtextxy(230,180,"10");
+outtextxy(264,144,"11");
+	while(kbhit()==0){
+	k-=0.5;
+	j-=6;
+		for(i=90;i>=1;i-=6){
+		if(kbhit()!=0)
+		exit();
+		setcolor(15);
+		setfillstyle(SOLID_FILL,WHITE);
+		pieslice(320,240,i,i-1,80);
+		pieslice(320,240,j,j-1,65);
+		pieslice(320,240,k,k-1,50);
+		sleep(1);
+		setcolor(7);
+		setfillstyle(SOLID_FILL,7);
+		pieslice(320,240,i,i-1,80);
+		pieslice(320,240,j,j-1,65);
+		pieslice(320,240,k,k-1,50);
+		}
+		for(i=359;i>=91;i-=6)
+		{
+		if(kbhit()!=0)
+		exit();
+		setcolor(15);
+		setfillstyle(SOLID_FILL,WHITE);
+		pieslice(320,240,i,i-1,80);
+		pieslice(320,240,j,j-1,65);
+		pieslice(320,240,k,k-1,50);
+		sleep(1);
+		setcolor(7);
+		setfillstyle(SOLID_FILL,7);
+		pieslice(320,240,i,i-1,80);
+		pieslice(320,240,j,j-1,65);
+		pieslice(320,240,k,k-1,50);
+		}
+		if(j<=0)
+		j=365;
+		if(k<=0.5)
+		k=359;
+		}
+		closegraph();
+		getch();
+		}
